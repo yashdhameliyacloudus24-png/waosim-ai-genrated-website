@@ -404,9 +404,11 @@ export function SuccessPage() {
                   Our support team is available 24/7 to help with activation and
                   setup.
                 </p>
-                <Button variant="outline" className="w-full bg-transparent">
-                  Contact Support
-                </Button>
+                <Link href="/contact" passHref>
+                  <Button variant="outline" className="w-full bg-transparent">
+                    Contact Support
+                  </Button>
+                </Link>
                 <div className="text-center">
                   <p className="text-xs text-muted-foreground">
                     Email: support@waosim.com

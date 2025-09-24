@@ -22,6 +22,7 @@ import {
   MapPin,
 } from "lucide-react";
 import styles from "./my-esim-dashboard.module.css";
+import Link from "next/link";
 
 interface TopUp {
   id: string;
@@ -721,7 +722,9 @@ export function MyESimDashboard() {
                     Get support with installation or troubleshooting
                   </p>
                 </div>
-                <Button variant="outline">Contact Support</Button>
+                <Link href="/contact" passHref>
+                  <Button variant="outline">Contact Support</Button>
+                </Link>
               </CardContent>
             </Card>
 
