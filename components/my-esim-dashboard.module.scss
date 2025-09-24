@@ -1,0 +1,424 @@
+.dashboard {
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.header {
+  border-bottom: 1px solid var(--border);
+  background: var(--card);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.main {
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.titleSection {
+  margin-bottom: 2rem;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0 0 0.5rem 0;
+}
+
+.pageSubtitle {
+  color: var(--muted);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.planCard {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  transition: all 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+}
+
+.planHeader {
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+.planTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.planInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.flag {
+  font-size: 2rem;
+}
+
+.planName {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--card-foreground);
+  margin: 0 0 0.25rem 0;
+}
+
+.planCountry {
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.planContent {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.planTabs {
+  width: 100%;
+}
+
+.tabsList {
+  width: 100%;
+  background: var(--muted);
+  border-radius: var(--radius-sm);
+  padding: 0.25rem;
+}
+
+.tabContent {
+  margin-top: 1rem;
+}
+
+.dataUsage {
+  margin-bottom: 1.5rem;
+}
+
+.dataHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--card-foreground);
+  margin: 0;
+}
+
+.dataText {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.progressBar {
+  margin-bottom: 0.5rem;
+}
+
+.dataPercentage {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.validity {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.validityItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.expiryDate {
+  color: var(--card-foreground);
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.primaryAction {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+
+  &:hover {
+    background: var(--primary);
+    opacity: 0.9;
+  }
+}
+
+.secondaryAction {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--card-foreground);
+
+  &:hover {
+    background: var(--accent);
+    color: var(--accent-foreground);
+  }
+}
+
+.detailsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detailLabel {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.detailValue {
+  font-size: 0.875rem;
+  color: var(--card-foreground);
+  font-family: var(--font-mono);
+}
+
+.iccidRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toggleButton {
+  padding: 0.25rem;
+  height: auto;
+  width: auto;
+}
+
+.installationStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.installGuide {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.qrSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+}
+
+.qrCode {
+  width: 150px;
+  height: 150px;
+  border-radius: var(--radius-sm);
+}
+
+.downloadQr {
+  border: 1px solid var(--border);
+}
+
+.installSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.stepNumber {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.stepContent {
+  flex: 1;
+
+  h5 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--card-foreground);
+    margin: 0 0 0.25rem 0;
+  }
+
+  p {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin: 0;
+  }
+}
+
+.quickActions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.actionCard {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+}
+
+.actionContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.actionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--card-foreground);
+  margin: 0 0 0.25rem 0;
+}
+
+.actionDescription {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+// Status badges
+.active {
+  background: var(--chart-3);
+  color: white;
+  border: none;
+}
+
+.pending {
+  background: var(--chart-4);
+  color: white;
+  border: none;
+}
+
+.expired {
+  background: var(--destructive);
+  color: var(--destructive-foreground);
+  border: none;
+}
+
+.notInstalled {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .headerContent {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .headerActions {
+    justify-content: center;
+  }
+
+  .planTitleRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actionContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
