@@ -133,7 +133,7 @@ export function CheckoutPage() {
 
     // // Simulate payment processing
     router.push("/success");
-    dispatch({ type: "CLEAR_CART" });
+    // dispatch({ type: "CLEAR_CART" });
     await new Promise((resolve) => setTimeout(resolve, 2000));
   };
 
